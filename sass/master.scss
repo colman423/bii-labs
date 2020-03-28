@@ -1,27 +1,73 @@
 $theme-color: rgb(28, 75, 127);
 
-body, header {
-  background-color: $theme-color;
-  font-family: 'Microsoft JhengHei';
+body,
+header {
+    background-color: $theme-color;
+    font-family: "Microsoft JhengHei";
 }
 
 header {
-  .nav-link {
-    color: white;
-    margin-left: 16px;
-    margin-right: 16px;
-
-  }
-  .lang-selector {
-    background-color: white;
-    border-radius: 50%;
-    border: none;
-    height: 42px;
-    width: 42px;
-    color: $theme-color;
-    word-break: keep-all;
-    &:focus {
-      outline: none;
+    .nav-link {
+        color: white !important;
+        margin-left: 16px;
+        margin-right: 16px;
     }
-  }
+    .active .nav-link {
+        color: rgb(41, 179, 235) !important;
+    }
+    .lang-selector {
+        background-color: white;
+        border-radius: 50%;
+        border: none;
+        height: 42px;
+        width: 42px;
+        color: $theme-color;
+        word-break: keep-all;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+footer {
+    background-color: white;
+    // padding-left: 48px;
+    // padding-right: 48px;
+    padding-top: 32px;
+    padding-bottom: 4px;
+
+    .footer-link {
+        // margin-bottom: 0;
+        color: $theme-color;
+        font-weight: 500;
+    }
+    .social-links {
+        font-size: 32px;
+        padding-left: 8px;
+        padding-right: 8px;
+        color: $theme-color;
+        &:hover {
+            text-decoration: none;
+            color: blue; // to-ask
+        }
+    }
+    .subscribe-input {
+        margin-top: 8px;
+
+        width: 100%;
+        border: none;
+        border-radius: 0px;
+        background-color: $theme-color !important;
+        color: white !important;
+        &::placeholder {
+            color: white !important;
+        }
+    }
+
+    .copy-right {
+        font-size: 70%;
+        margin-top: 32px;
+        text-align: center;
+        color: $theme-color;
+    }
 }
