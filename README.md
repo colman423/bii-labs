@@ -15,9 +15,11 @@ yarn 1.22.4
   yarn start 
   ```
 
-3. 編寫sass/*.sass檔，gulp會自動編譯進dist/*.css檔；
-    編寫js/*.js檔，gulp會自動minify後存進dist/*.min.js。
-    之後所有的*.html皆是引入dist/~裡的檔案。
+3. 編寫sass/\*.sass檔，gulp會自動編譯進dist/\*.css檔；
+   
+   編寫js/\*.js檔，gulp會自動minify後存進dist/\*.min.js。
+   
+   之後所有的\*.html皆是引入dist/~裡的檔案。
 
 
 ## Folders
