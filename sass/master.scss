@@ -1,3 +1,27 @@
-body {
-  background-color: rgb(28, 75, 127);
+$theme-color: rgb(28, 75, 127);
+
+body, header {
+  background-color: $theme-color;
+  font-family: 'Microsoft JhengHei';
+}
+
+header {
+  .nav-link {
+    color: white;
+    margin-left: 16px;
+    margin-right: 16px;
+
+  }
+  .lang-selector {
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    height: 42px;
+    width: 42px;
+    color: $theme-color;
+    word-break: keep-all;
+    &:focus {
+      outline: none;
+    }
+  }
 }
