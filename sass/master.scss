@@ -1,9 +1,11 @@
 $theme-color: rgb(28, 75, 127);
 
-body,
+body {
+    font-family: "Microsoft JhengHei";     // to-check
+}
+
 header {
     background-color: $theme-color;
-    font-family: "Microsoft JhengHei";
 }
 
 header {
@@ -11,9 +13,12 @@ header {
         color: white !important;
         margin-left: 16px;
         margin-right: 16px;
-    }
-    .active .nav-link {
-        color: rgb(41, 179, 235) !important;
+        &.active {
+            color: rgb(41, 179, 235) !important;        // to-check
+        }
+        &:hover {
+            color: #9dddf6!important;     // to-check
+        }
     }
     .lang-selector {
         background-color: white;
@@ -23,6 +28,9 @@ header {
         width: 42px;
         color: $theme-color;
         word-break: keep-all;
+        &:hover {
+            background-color: rgb(41, 179, 235) !important;     // to-check
+        }
         &:focus {
             outline: none;
         }
@@ -30,6 +38,8 @@ header {
 }
 
 footer {
+    border-top: 1px solid $theme-color; // for dev 
+
     background-color: white;
     // padding-left: 48px;
     // padding-right: 48px;
