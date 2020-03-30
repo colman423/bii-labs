@@ -1,91 +1,95 @@
 $(function () {
-  var canvas = this.__canvas = new fabric.Canvas('banner-canvas');
-  canvas.setDimensions({ width: 1000, height: 500 });
-  console.log("RRR", canvas)
-  fabric.Object.prototype.transparentCorners = false;
+  var pointRadius = 3
+  var color = '#3186e3'
 
+  var canvas = this.__canvas = new fabric.Canvas('banner-canvas', {
+    width: window.innerWidth * 0.95,
+    height: window.innerWidth * 0.95 * 586 / 1565,
+    hoverCursor: 'pointer',
+  });
 
   fabric.Image.fromURL("../images/about-banner.png", function (img) {
     // add background image
-    console.log("img", img)
     canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
       scaleX: canvas.width / img.width,
       scaleY: canvas.height / img.height
     });
   });
 
-  fabric.Image.fromURL('../images/test.png', function (img) {
-    img.set({
-      left: 400,
-      top: 100
-    });
-    img.link = "www.google.com"
-    canvas.add(img);
+  canvas.on('object:selected', function (e) {
+    var link = e.target.link
+    window.open(link, '_blank')
   });
-
-  // canvas.on('mouse:over', function (e) {
-  //   console.log("over")
-  //   e.target.set('fill', 'red');
-  //   canvas.renderAll();
-  // });
-
-  // canvas.on('mouse:out', function (e) {
-  //   console.log("out")
-  //   e.target.set('fill', 'green');
-  //   canvas.renderAll();
-  // });
-
-  canvas.on('object:selected', function(e) {
-    console.log("selected", e, e.target.link)
-  });
-
 
   function makePoint(x, y) {
     var point = new fabric.Circle({
       left: x,
       top: y,
       strokeWidth: 0,
-      radius: 3,
-      fill: '#3186e3',
+      radius: pointRadius,
+      fill: color,
       selectable: false,
       evented: false
-
     });
-    point.on('mouse:over', console.log)
-
     return point
-    // return new fabric.Point(x, y)
   }
-  function makeLine(p1, p2) {
-    return new fabric.Line([p1.left, p1.top, p2.left, p2.top], {
-      stroke: '#3186e3',
-      strokeWidth: 2,
-      selectable: false,
-      evented: false
-    })
+
+  function addLine(p1, p2) {
+    var line = new fabric.Line([
+      p1.left + pointRadius / 2,
+      p1.top + pointRadius / 2,
+      p2.left + pointRadius / 2,
+      p2.top + pointRadius / 2
+    ], {
+        stroke: color,
+        strokeWidth: 2,
+        selectable: false,
+        evented: false
+      }
+    )
+    canvas.add(line)
   }
-  var p1 = makePoint(10, 20)
-  var p2 = makePoint(100, 120)
-  var line = makeLine(p1, p2)
-  canvas.add(p1, p2, line)
 
+  function addLinkIcon(position, iconPath, linkHref) {
+    fabric.Image.fromURL(iconPath, function (img) {
+      img.set({
+        left: position[0],
+        top: position[1],
+        hasControls: false,
+        lockMovementX: true,
+        lockMovementY: true,
+        // borderColor: 'transparent',   // 可看是否要這行效果
+        link: linkHref
+      });
+      canvas.add(img)
+    });
+  }
 
-  // // add random objects
-  // for (var i = 15; i--;) {
-  //   var dim = fabric.util.getRandomInt(30, 60);
-  //   var klass = ['Rect', 'Triangle', 'Circle'][fabric.util.getRandomInt(0, 2)];
-  //   var options = {
-  //     top: fabric.util.getRandomInt(0, 600),
-  //     left: fabric.util.getRandomInt(0, 600),
-  //     fill: 'green',
-  //   };
-  //   if (klass === 'Circle') {
-  //     options.radius = dim;
-  //   }
-  //   else {
-  //     options.width = dim;
-  //     options.height = dim;
-  //   }
-  //   canvas.add(new fabric[klass](options));
-  // }
+  var graph = [
+    { pos: [0, 233], relation: [] },    // 0
+    { pos: [47, 238], relation: [0] },    // 1
+    { pos: [92, 240], relation: [1] },    // 2
+    { pos: [0, 290], relation: [1] },    // 3
+    { pos: [28, 389], relation: [1, 2] },    // 4
+    { pos: [0, 388], relation: [4] },    // 5
+    { pos: [180, 312], relation: [2, 4] },    // 6
+    { pos: [245, 165], relation: [2, 6] },    // 7
+    { pos: [232, 308], relation: [6, 7] },    // 8
+    { pos: [347, 162], relation: [7, 8] },    // 9
+    { pos: [364, 337], relation: [9, 8] },    // 10
+    { pos: [392, 166], relation: [9, 10] },    // 11
+    // { pos: [347, 162], relation: [7, 8] },    // 10
+
+  ]
+  for (var i = 0; i < graph.length; i++) {
+    graph[i].point = makePoint(graph[i].pos[0], graph[i].pos[1])
+    canvas.add(graph[i].point)
+    for (var j = 0; j < graph[i].relation.length; j++) {
+      var relatedPoint = graph[i].relation[j]
+      addLine(graph[i].point, graph[relatedPoint].point)
+    }
+  }
+
+  addLinkIcon([400, 10], '../images/test.png', "https://www.google.com")
+
 })
