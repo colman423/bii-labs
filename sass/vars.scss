@@ -1,0 +1,33 @@
+$theme-color: rgb(28, 75, 127);
+
+$sm-width: 576px;
+$md-width: 768px;
+$lg-width: 992px;
+$xl-width: 1200px;
+
+@mixin xs() {
+    @media all and(max-width: $sm-width) {
+      @content;
+    }
+}
+
+@mixin sm() {
+  @media all and(min-width: $sm-width) {
+    @content;
+  }
+}
+@mixin md() {
+  @media all and(min-width: $md-width) {
+    @content;
+  }
+}
+@mixin lg() {
+  @media all and(min-width: $lg-width) {
+    @content;
+  }
+}
+@mixin xl() {
+  @media all and(min-width: $xl-width) {
+    @content;
+  }
+}
