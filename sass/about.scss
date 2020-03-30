@@ -1,7 +1,33 @@
 @import "./vars.scss";
 
+
+#section-banner {
+    background-color: $theme-color;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+#section-slogon {
+    background-color: $theme-dark-color;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+#section-milestone {
+    background-color: $theme-color;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+#section-team {
+    background-color: $theme-dark-color;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
 #section-cooperates {
     background-color: $theme-color;
+    padding-top: 160px;
     padding-bottom: 160px;
 
     .logo-animate-container {
@@ -39,4 +65,15 @@
             }
         }
     }
+}
+
+#section-contact {
+    background-color: $theme-dark-color;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    .form-wrapper {
+        background-color: white;
+        padding: 32px 28px;
+    }
+
 }
