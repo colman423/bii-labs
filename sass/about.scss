@@ -3,8 +3,14 @@
 
 #section-banner {
     background-color: $theme-color;
-    padding-top: 160px;
-    padding-bottom: 160px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    #banner-canvas {
+        border: 1px solid black;
+        width: 100%;
+        height: 500px;
+    }
+
 }
 
 #section-slogon {
