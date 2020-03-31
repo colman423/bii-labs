@@ -1,7 +1,7 @@
 @import "./vars.scss";
 
 body {
-    font-family: "Microsoft JhengHei";     // to-check
+    font-family: "Microsoft JhengHei"; // to-check
 }
 
 header {
@@ -14,10 +14,10 @@ header {
         margin-left: 16px;
         margin-right: 16px;
         &.active {
-            color: rgb(41, 179, 235) !important;        // to-check
+            color: rgb(41, 179, 235) !important; // to-check
         }
         &:hover {
-            color: #9dddf6!important;     // to-check
+            color: #9dddf6 !important; // to-check
         }
     }
     .lang-selector {
@@ -29,7 +29,7 @@ header {
         color: $theme-color;
         word-break: keep-all;
         &:hover {
-            background-color: rgb(41, 179, 235) !important;     // to-check
+            background-color: rgb(41, 179, 235) !important; // to-check
         }
         &:focus {
             outline: none;
@@ -38,7 +38,7 @@ header {
 }
 
 footer {
-    border-top: 1px solid $theme-color; // for dev 
+    border-top: 1px solid $theme-color; // for dev
 
     background-color: white;
     // padding-left: 48px;
@@ -82,7 +82,28 @@ footer {
     }
 }
 
-
 .text-theme {
     color: $theme-color;
+}
+
+.section-title {
+    color: white;
+    font-weight: 600;
+    font-size: 28px;
+    &:before {
+        content: "";
+        margin-right: 16px;
+        border-left: 4px solid white;
+    }
+}
+
+@media (min-width: 992px) {
+    .thin-container {
+        max-width: 720px !important;
+    }
+}
+@media (min-width: 1200px) {
+    .thin-container {
+        max-width: 960px !important;
+    }
 }
