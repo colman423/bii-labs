@@ -97,13 +97,12 @@ footer {
     }
 }
 
-@media (min-width: 992px) {
-    .thin-container {
+.thin-container {
+    @include lg() {
         max-width: 720px !important;
     }
-}
-@media (min-width: 1200px) {
-    .thin-container {
+    @include xl() {
         max-width: 960px !important;
     }
 }
+

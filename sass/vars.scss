@@ -11,7 +11,6 @@ $xl-width: 1200px;
       @content;
     }
 }
-
 @mixin sm() {
   @media all and(min-width: $sm-width) {
     @content;
