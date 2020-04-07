@@ -5,7 +5,7 @@ $(function () {
   $constellationelCanvas.constellation({
     star: {
       color: 'rgb(38, 105, 178)',
-      width: 2,
+      width: 3.5,
       randomWidth: false
     },
     line: {
@@ -13,8 +13,8 @@ $(function () {
     },
     velocity: 0.2,
     width: $constellationelCanvas.width(),
-    height: $constellationelCanvas.height() / 2,
-    length: $constellationelCanvas.width() / 40,
+    height: $constellationelCanvas.height(),
+    length: $constellationelCanvas.width() / 30,
     radius: $constellationelCanvas.width(),
     distance: 200,
     // rad

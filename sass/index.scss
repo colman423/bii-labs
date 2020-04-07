@@ -10,21 +10,35 @@ $xl: 1200px;
     padding-bottom: 120px;
 
     #banner-container {
+        $container-height: 500px;
+
         position: relative;
         overflow: hidden;
+        height: $container-height;
         
+        @mixin overlay($height) {
+            // usage: @include overlay(XXXpx);
+            // 讓圖層能重疊，重疊順序目前用html dom的順序來決定，若變更複雜再使用z-index
+            position: absolute;
+            top: ($container-height / 2 - $height / 2);
+            height: $height;
+            left: 50%;
+            margin-left: -1 * ($height / 2);
+        }
+
         canvas#banner-constellationel {
             position: absolute;
             top: 0;
             width: 120%;
-            height: 300px;
+            height: $container-height;
             margin-left: -10%;
         }
+        #banner-earth {
+            @include overlay($container-height);
+        }
+
         #banner-logo {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            height: 300px;
+            @include overlay(225px);
         }
     }
 }
