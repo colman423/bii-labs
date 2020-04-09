@@ -4,12 +4,13 @@
  * @author Acauã Montiel <contato@acauamontiel.com.br>
  * @license http://acaua.mit-license.org/
  */
+
 (function ($, window) {
   var $window = $(window);
-	/**
-	 * Makes a nice constellation on canvas
-	 * @constructor Constellation
-	 */
+  /**
+   * Makes a nice constellation on canvas
+   * @constructor Constellation
+   */
   function Constellation(canvas, options) {
     var $canvas = $(canvas),
       context = canvas.getContext('2d'),
@@ -32,27 +33,28 @@
         },
         width: window.innerWidth,   // width of canvas
         height: window.innerHeight, // height of canvas
-        velocity: 0.1,    // stars的移動速度，尚未參透移動方向
+        velocity: 0.1,    // stars的移動速度
+        velocityChaos: 8e-4,    // stars的移動方向，多大的機率會被改變
         length: 100,      // 畫面上有多少stars
         distance: 120,    // 兩個stars間隔多遠以內，就要連線
         radius: 150,      // 以滑鼠位置為圓心，多大的範圍內要highlight lines
+        initStars: [],    // 指定一開始stars的位置
         stars: []         // 存Star物件的array，不須設定
       },
       config = $.extend(true, {}, defaults, options);
 
-    function Star() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
+    function Star(x, y) {
+      this.x = x || (Math.random() * canvas.width);
+      this.y = y || (Math.random() * canvas.height);
 
-      this.vx = config.velocity * (Math.random() - 1);
-      this.vy = config.velocity * (Math.random() - 1);
+      this.vx = config.velocity * (Math.random() - 0.5);
+      this.vy = config.velocity * (Math.random() - 0.5);
 
       this.radius = config.star.randomWidth ? (Math.random() * config.star.width) : config.star.width;
-      // console.log("star this", this)
     }
 
     Star.prototype = {
-      create: function () {
+      draw: function () {
         // 畫一個圓形
         context.beginPath();
         context.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
@@ -67,12 +69,11 @@
           var star = config.stars[i];
 
           // 撞牆才改變速度，待優化
-          if (star.y < 0 || star.y > canvas.height) {
-            star.vx = star.vx;
+          if (star.y < 0 || star.y > canvas.height || Math.random() < config.velocityChaos) {
             star.vy = - star.vy;
-          } else if (star.x < 0 || star.x > canvas.width) {
+          }
+          if (star.x < 0 || star.x > canvas.width || Math.random() < config.velocityChaos) {
             star.vx = - star.vx;
-            star.vy = star.vy;
           }
 
           star.x += star.vx;
@@ -118,17 +119,28 @@
     };
 
     this.createStars = function () {
-      var length = config.length,
-        star,
-        i;
+      var length = config.length;
+      var initStars = config.initStars;
+      var i;
 
+      for (i = 0; i < initStars.length; i++) {
+        var starPosition = initStars[i];
+        config.stars.push(new Star(starPosition.x, starPosition.y));
+      }
+
+      for (; i < length; i++) {
+        config.stars.push(new Star());
+      }
+    }
+
+    this.animateStars = function () {
+      var length = config.length;
+      var star;
       context.clearRect(0, 0, canvas.width, canvas.height);
 
-      for (i = 0; i < length; i++) {
-        config.stars.push(new Star());
+      for (var i = 0; i < length; i++) {
         star = config.stars[i];
-
-        star.create();
+        star.draw();
       }
 
       star.line();
@@ -190,8 +202,9 @@
     this.init = function () {
       this.setCanvas();
       this.setContext();
+      this.createStars();
       this.setInitialPosition();
-      this.loop(this.createStars);
+      this.loop(this.animateStars);
       this.bind();
     };
   }
