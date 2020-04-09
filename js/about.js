@@ -11,7 +11,7 @@ $(function () {
     hoverCursor: 'pointer',
   });
 
-  fabric.Image.fromURL("../images/about-banner.png", function (img) {
+  fabric.Image.fromURL("../images/about-banner-bg.png", function (img) {
     // add background image
     canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
       scaleX: canvas.width / img.width,
