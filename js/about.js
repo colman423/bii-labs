@@ -9,6 +9,8 @@ $(function () {
     width: window.innerWidth * 0.95,
     height: window.innerWidth * 0.95 * 586 / 1565,
     hoverCursor: 'pointer',
+    hasControls: false,
+    selection: false
   });
 
   fabric.Image.fromURL("../images/about-banner-bg.png", function (img) {
@@ -28,6 +30,8 @@ $(function () {
       hasControls: false,
       lockMovementX: true,
       lockMovementY: true,
+      selectable: false,
+      hoverCursor: 'default',
     });
     canvas.add(img)
   });

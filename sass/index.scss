@@ -1,3 +1,5 @@
+@import "./vars.scss";
+
 $theme-color: rgb(28, 75, 127);
 $sm: 576px;
 $md: 768px;
@@ -50,20 +52,19 @@ $xl: 1200px;
 
 .first-news {
     background-color: white;
-    width: 100%;
-    padding: 32px 80px 32px 0px;
+    padding: 32px;
 
     .news-container {
-        margin-left: auto;
+        margin-top: 30px;
     }
-}
-@media (max-width: $lg) {
-    .first-news {
-        padding-left: 32px;
-        padding-right: 32px;
+
+    @include lg() {
+        width: 100%;
+        padding: 32px 80px 32px 0px;
 
         .news-container {
-            margin-top: 30px;
+            margin-top: 0px;
+            margin-left: auto;
         }
     }
 }
