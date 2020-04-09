@@ -19,7 +19,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function () {
-    return gulp.src('js/*.js')
+    return gulp.src('js/**/*.js')
         .pipe(uglify())
         .pipe(rename(function(path) {
             path.basename += ".min";
@@ -29,8 +29,8 @@ gulp.task('js', function () {
 });
 
 gulp.task('watch', function () {
-	gulp.watch('sass/*.scss', gulp.series('sass')); //監聽路徑，以及檔案變更後所執行的任務
-	gulp.watch('js/*.js', gulp.series('js')); //監聽路徑，以及檔案變更後所執行的任務
+	gulp.watch('sass/**/*.scss', gulp.series('sass')); //監聽路徑，以及檔案變更後所執行的任務
+	gulp.watch('js/**/*.js', gulp.series('js')); //監聽路徑，以及檔案變更後所執行的任務
 });
 
 gulp.task('default', gulp.series('clean', 'sass', 'js', function(done) {
