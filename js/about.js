@@ -1,5 +1,7 @@
 $(function () {
   // createBannerCanvas();
+
+  initMileStone();
 })
 
 function createBannerCanvas() {
@@ -147,5 +149,13 @@ function createBannerCanvas() {
   addLinkIcon([895 * SCALE_X, 231 * SCALE_Y], '../images/test.png', "https://www.google.com")
   addLinkIcon([1047 * SCALE_X, 172 * SCALE_Y], '../images/test.png', "https://www.google.com")
   addLinkIcon([1055 * SCALE_X, 441 * SCALE_Y], '../images/test.png', "https://www.google.com")
+}
+
+function initMileStone() {
+  new Vivus('my-svg', { 
+    type: 'oneByOne',
+    duration: 200,
+
+  }, console.log);
 }
 
