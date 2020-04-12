@@ -56,7 +56,7 @@ yarn 1.22.4
 放各個sass原始碼，編譯後則會被放在/dist/css。
 
 ### /dist/
-放各個編譯好的js, css檔案。*不需編輯、不需進git。*
+放各個編譯好的js, css檔案。*不需編輯、不需進git*
 
 ### /static/
 放不需處理的靜態資源檔。
@@ -65,7 +65,7 @@ yarn 1.22.4
 放各頁設計圖檔。
 
 ### /deploy/
-```yarn build```完後產生此folder，可直接將folder內的所有東西上傳至ftp。
+```yarn build```完後產生此folder，可直接將folder內的所有東西上傳至ftp。*不需編輯、不需進git*
 
 
 

@@ -14,7 +14,6 @@ gulp.task('clean', function () {
         .pipe(clean({ force: true }));
 });
 
-
 gulp.task('sass', function () {
     return gulp.src('sass/*.scss')
         .pipe(sass().on('error', sass.logError))
@@ -66,3 +65,10 @@ gulp.task('watch', function () {
 gulp.task('default', gulp.series('clean', 'sass', 'js', gulp.parallel('webserver', 'watch'), function (done) {
     done();
 }));
+
+gulp.task('build', gulp.series(
+    () => gulp.src('./deploy/', { read: false, allowEmpty: true }).pipe(clean({ force: true })),
+    () => gulp.src('./dist/**/*').pipe(gulp.dest('./deploy/')),
+    () => gulp.src('./src/**/*').pipe(gulp.dest('./deploy/')),
+    () => gulp.src('./static/**/*').pipe(gulp.dest('./deploy/')),
+));
