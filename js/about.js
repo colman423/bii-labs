@@ -1,4 +1,10 @@
 $(function () {
+  // createBannerCanvas();
+
+  initMileStone();
+})
+
+function createBannerCanvas() {
   var pointRadius = 3
   var color = '#3186e3'
   var ICON_SIZE = 75
@@ -143,5 +149,13 @@ $(function () {
   addLinkIcon([895 * SCALE_X, 231 * SCALE_Y], 'assets/test.png', "https://www.google.com")
   addLinkIcon([1047 * SCALE_X, 172 * SCALE_Y], 'assets/test.png', "https://www.google.com")
   addLinkIcon([1055 * SCALE_X, 441 * SCALE_Y], 'assets/test.png', "https://www.google.com")
+}
 
-})
+function initMileStone() {
+  new Vivus('my-svg', {
+    type: 'oneByOne',
+    duration: 200,
+
+  }, console.log);
+}
+
