@@ -13,7 +13,7 @@ $(function () {
     selection: false
   });
 
-  fabric.Image.fromURL("images/about-banner-bg.png", function (img) {
+  fabric.Image.fromURL("assets/about-banner-bg.png", function (img) {
     // add background image
     canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
       scaleX: canvas.width / img.width,
@@ -21,7 +21,7 @@ $(function () {
     });
   });
 
-  fabric.Image.fromURL("images/about-banner-people.png", function (img) {
+  fabric.Image.fromURL("assets/about-banner-people.png", function (img) {
     img.set({
       // scaleX: ICON_SIZE / img.width,
       // scaleY: ICON_SIZE / img.height,
@@ -135,13 +135,13 @@ $(function () {
     }
   }
 
-  addLinkIcon([232 * SCALE_X, 308 * SCALE_Y], 'images/test.png', "https://www.google.com")
-  addLinkIcon([350 * SCALE_X, 170 * SCALE_Y], 'images/test.png', "https://www.google.com")
-  addLinkIcon([578 * SCALE_X, 295 * SCALE_Y], 'images/test.png', "https://www.google.com")
-  addLinkIcon([716 * SCALE_X, 135 * SCALE_Y], 'images/test.png', "https://www.google.com")
-  addLinkIcon([751 * SCALE_X, 460 * SCALE_Y], 'images/test.png', "https://www.google.com")
-  addLinkIcon([895 * SCALE_X, 231 * SCALE_Y], 'images/test.png', "https://www.google.com")
-  addLinkIcon([1047 * SCALE_X, 172 * SCALE_Y], 'images/test.png', "https://www.google.com")
-  addLinkIcon([1055 * SCALE_X, 441 * SCALE_Y], 'images/test.png', "https://www.google.com")
+  addLinkIcon([232 * SCALE_X, 308 * SCALE_Y], 'assets/test.png', "https://www.google.com")
+  addLinkIcon([350 * SCALE_X, 170 * SCALE_Y], 'assets/test.png', "https://www.google.com")
+  addLinkIcon([578 * SCALE_X, 295 * SCALE_Y], 'assets/test.png', "https://www.google.com")
+  addLinkIcon([716 * SCALE_X, 135 * SCALE_Y], 'assets/test.png', "https://www.google.com")
+  addLinkIcon([751 * SCALE_X, 460 * SCALE_Y], 'assets/test.png', "https://www.google.com")
+  addLinkIcon([895 * SCALE_X, 231 * SCALE_Y], 'assets/test.png', "https://www.google.com")
+  addLinkIcon([1047 * SCALE_X, 172 * SCALE_Y], 'assets/test.png', "https://www.google.com")
+  addLinkIcon([1055 * SCALE_X, 441 * SCALE_Y], 'assets/test.png', "https://www.google.com")
 
 })

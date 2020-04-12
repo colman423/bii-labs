@@ -30,13 +30,11 @@ gulp.task('js', function () {
 });
 
 gulp.task('webserver', function () {
-    gulp.src(['dist', 'src', '/']) //起始目錄
+    gulp.src(['dist', 'src', 'static']) //起始目錄
         .pipe(webserver({
             host: '0.0.0.0', //host設定'0.0.0.0'，就可以用內網檢視
             port: 3000, //設定一個沒在使用的port
             livereload: true, //auto refresh
-            directoryListing: true,
-            // fallback: 'js/about.min.js',
             open: "http://localhost:3000/index.html" //執行gulp時自動開啟browser
         }));
 });
