@@ -34,7 +34,7 @@ yarn 1.22.4
    
    e.g
    ```
-   /src/p.html => "http://localhost:3000/p.html"
+   /src/about.html => "http://localhost:3000/about"
    /dist/js/a.min.js => <script src="/js/a.min.js"></script>
    /dist/css/b.css => <link href="/css/b.css" />
    /static/assets/i.png => <img src="/assets/i.png" />
