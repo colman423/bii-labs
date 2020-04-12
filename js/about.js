@@ -154,7 +154,7 @@ function createBannerCanvas() {
 function initMileStone() {
   new Vivus('my-svg', {
     type: 'oneByOne',
-    duration: 200,
+    duration: 150,
 
   }, console.log);
 }
