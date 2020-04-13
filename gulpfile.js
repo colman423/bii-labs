@@ -63,9 +63,9 @@ gulp.task('webserver', function () {
         },
     })
     return gulp.src('./')
-    // .pipe(open({
-    //     uri: 'http://localhost:' + server.port
-    // }));
+    .pipe(open({
+        uri: 'http://localhost:' + server.port
+    }));
 });
 
 gulp.task('watch', function () {
@@ -81,13 +81,5 @@ gulp.task('default', gulp.series('clean', 'sass', 'js', 'html', gulp.parallel('w
 gulp.task('build', gulp.series(
     () => gulp.src('./deploy/', { read: false, allowEmpty: true }).pipe(clean({ force: true })),
     () => gulp.src('./dist/**/*').pipe(gulp.dest('./deploy/')),
-    () => gulp.src('./src/**/*').pipe(gulp.dest('./deploy/')),
     () => gulp.src('./static/**/*').pipe(gulp.dest('./deploy/')),
 ));
-
-process.on('SIGINT', function () {
-    console.log("SIGINTSIGINTSIGINTSIGINT")
-    // gulp.watch.close();
-    process.exit();
-});
-//   exports.default = promiseTask;
