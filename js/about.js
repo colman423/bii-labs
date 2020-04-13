@@ -155,6 +155,7 @@ function initMileStone() {
   new Vivus('my-svg', {
     type: 'oneByOne',
     duration: 150,
+    // start: 'autostart'
 
   }, console.log);
 }
