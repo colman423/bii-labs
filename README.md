@@ -20,17 +20,17 @@ yarn 1.22.4
 3. 打開localhost:3000
     
 
-4. style檔案寫在/sass/\*.sass
+4. html檔案寫在/src/\*.html
+   
+   style檔案寫在/sass/\*.sass
    
    js檔案寫在/js/\*.js
    
-   onSave時自動編譯並最佳化至/dist/
+   onSave時自動處理至/dist/
 
 5. images, icon, favicon.ico放在/static
-   
-6. .html檔案寫在/src/\*.html
 
-7. 此localhost server的根目錄會是[/dist, /src, /static]
+6. 此localhost server的根目錄會是[/dist, /static]
    
    e.g
    ```
@@ -47,25 +47,25 @@ yarn 1.22.4
 關於編譯sass, js的規則、開啟localhost的設定等。
 
 ### /src/
-放各個html檔案。*
+放各個html檔案，在inject過header, footer後會被放在/dist/。
 
 ### /js/
-放各個js原始碼，最佳化後則會被放在/dist/js。
+放各個js原始碼，最佳化後會被放在/dist/js/。
 
 ### /sass/
-放各個sass原始碼，編譯後則會被放在/dist/css。
+放各個sass原始碼，編譯後則會被放在/dist/css/。
 
 ### /dist/
-放各個編譯好的js, css檔案。*不需編輯、不需進git。*
+放各個處理過的js, css, html檔案。*不需編輯、不需進git*
 
 ### /static/
-放不需處理的靜態資源檔。
+放不需處理的靜態資源檔，像是images, icons, favicon.ico等等。
 
 ### /design/
 放各頁設計圖檔。
 
 ### /deploy/
-```yarn build```完後產生此folder，可直接將folder內的所有東西上傳至ftp。
+```yarn build```完後產生此folder，可直接將folder內的所有東西上傳至ftp。*不需編輯、不需進git*
 
 
 
