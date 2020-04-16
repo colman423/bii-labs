@@ -1,3 +1,110 @@
+@import "./vars.scss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
 body {
-  background-color: rgb(28, 75, 127);
+    // font-family: "Helvetica", "Arial", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    font-family: "Arial", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
 }
+
+header {
+    background-color: $theme-color;
+}
+
+header {
+    .nav-link {
+        color: white !important;
+        margin-left: 16px;
+        margin-right: 16px;
+        &.active {
+            color: rgb(41, 179, 235) !important; // to-check
+        }
+        &:hover {
+            color: #9dddf6 !important; // to-check
+        }
+    }
+    .lang-selector {
+        background-color: white;
+        border-radius: 50%;
+        border: none;
+        height: 42px;
+        width: 42px;
+        color: $theme-color;
+        word-break: keep-all;
+        &:hover {
+            background-color: rgb(41, 179, 235) !important; // to-check
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+footer {
+    border-top: 1px solid $theme-color; // for dev
+
+    background-color: white;
+    // padding-left: 48px;
+    // padding-right: 48px;
+    padding-top: 32px;
+    padding-bottom: 4px;
+
+    .footer-link {
+        // margin-bottom: 0;
+        color: $theme-color;
+        font-weight: 500;
+    }
+    .social-links {
+        font-size: 32px;
+        padding-left: 8px;
+        padding-right: 8px;
+        color: $theme-color;
+        &:hover {
+            text-decoration: none;
+            color: blue; // to-ask
+        }
+    }
+    .subscribe-input {
+        margin-top: 8px;
+
+        width: 100%;
+        border: none;
+        border-radius: 0px;
+        background-color: $theme-color !important;
+        color: white !important;
+        &::placeholder {
+            color: white !important;
+        }
+    }
+
+    .copy-right {
+        font-size: 70%;
+        margin-top: 32px;
+        text-align: center;
+        color: $theme-color;
+    }
+}
+
+.text-theme {
+    color: $theme-color;
+}
+
+.section-title {
+    color: white;
+    font-weight: 600;
+    font-size: 28px;
+    &:before {
+        content: "";
+        margin-right: 16px;
+        border-left: 4px solid white;
+    }
+}
+
+.thin-container {
+    @include lg() {
+        max-width: 720px !important;
+    }
+    @include xl() {
+        max-width: 1080px !important;
+    }
+}
+

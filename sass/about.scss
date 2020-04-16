@@ -1,0 +1,99 @@
+@import "./vars.scss";
+
+
+#section-banner {
+    background-color: $theme-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    #banner-canvas {
+        // border: 1px double black;
+        // width: 100%;
+        // height: 500px;
+    }
+
+}
+
+#section-slogon {
+    background-color: $theme-dark-color;
+    padding-top: 85px;
+    padding-bottom: 85px;
+
+    .slogon-img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        @include lg() {
+            margin-left: initial;
+            margin-bottom: 0px;
+        }
+    }
+    .slogon-text {
+        margin-left: auto;
+        color: white;
+    }
+}
+
+#section-milestone {
+    background-color: $theme-color;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+#section-team {
+    background-color: $theme-dark-color;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+#section-cooperates {
+    background-color: $theme-color;
+    padding-top: 160px;
+    padding-bottom: 160px;
+
+    .logo-animate-container {
+        padding: 16px 32px;
+        @include sm() {
+            padding: 32px 48px;
+        }
+        @include md() {
+            padding: 48px 48px;
+        }
+        @include lg() {
+            padding: 48px 64px;
+        }
+
+        .logo-animate {
+            width: 100%;
+            -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
+
+            @keyframes toColor {
+                0% {
+                    -webkit-filter: brightness(0) invert(1);
+                    filter: brightness(0) invert(1);
+                }
+                100% {
+                    -webkit-filter: brightness(1) invert(0);
+                    filter: brightness(1) invert(0);
+                }
+            }
+
+            &:hover {
+                // animation: toColor .8s;  // seems not so good
+                -webkit-filter: brightness(1) invert(0);
+                filter: brightness(1) invert(0);
+            }
+        }
+    }
+}
+
+#section-contact {
+    background-color: $theme-dark-color;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    .form-wrapper {
+        background-color: white;
+        padding: 32px 28px;
+    }
+
+}
