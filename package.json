@@ -6,10 +6,12 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
+    "deploy": "yarn build && gh-pages -d deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "connect-modrewrite": "^0.10.2",
+    "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
