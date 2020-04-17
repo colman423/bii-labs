@@ -1,3 +1,8 @@
 {
-  "news": "jp news"
+  "news": "jp news",
+  "about-slogon": "BiiLabsはIoE時代の到来を見据え、スマートシティ・スマートモビリティ・スマートエネルギー管理システム等における課題に対し、分散型台帳技術を開発しています。\n私たちの先端技術はあらゆる産業のデジタル化を目指し、信頼性・セキュリティ・ 効率性にかかる課題を解決します。",
+  "about-milestone-2017": "創業",
+  "about-milestone-2018": "台湾本社を設立",
+  "about-milestone-2019-1h": "arm IoT Capital・ParticleXからの資金調達\nTransIoT「利用ベース自動車保険」の共同発表",
+  "about-milestone-2019-2h": "米国支社を設立\n\nINATBA・Eclipse Foundation・eCl@ssへの参加\n\nYallvend「スマート自動販売機」の共同発表"
 }
