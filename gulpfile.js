@@ -101,7 +101,11 @@ gulp.task('deploy-sass', function () {
 
 gulp.task('deploy-js', function () {
     return gulp.src('js/**/*.js')
-        .pipe(uglify())
+        .pipe(uglify({
+            compress: {
+                drop_console: true
+            }
+        }))
         .pipe(rename(function (path) {
             path.basename += ".min";
             path.extname = ".js";
