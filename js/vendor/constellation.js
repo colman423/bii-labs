@@ -123,9 +123,10 @@
       var initStars = config.initStars;
       var i;
 
-      for (i = 0; i < initStars.length; i++) {
+      for (i = 0; i < initStars.length && i < length; i++) {
         var starPosition = initStars[i];
-        config.stars.push(new Star(starPosition.x, starPosition.y));
+        config.stars.push(new Star(starPosition.x * window.innerWidth, starPosition.y * window.innerWidth));
+        console.log(starPosition.x * window.innerWidth, starPosition.y * window.innerWidth)
       }
 
       for (; i < length; i++) {
