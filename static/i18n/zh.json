@@ -1,5 +1,12 @@
 {
-  "news": "最新消息",
+  "index-news": "最新消息",
+  "index-news-title-1": "BiiLabs與Eclipse基金會、IOTA基金會及業界領導廠商 聯手成立Tangle EE工作小組",
+  "index-news-summary-1": "BiiLabs 宣布與 Eclipse 基金會、IOTA 基金會、業界領導廠商以及學術界合作，推動成立 Tangle EE 工作小組，以針對基於 IOTA 的資料解決方案進行開發並使其商業化。",
+  "index-news-title-2": "BiiLabs 與業安科技協力打造全球首創智慧販賣機快速升級模組 透過區塊鏈實現安全、可信的身份驗證",
+  "index-news-summary-2": "BiiLabs 與業安科技宣布雙方合作，將BiiLabs 去中心化身份識別技術導入業安販賣機升級模組，統一安全身份驗證系統，應用於須受購買年齡規範的販賣機上，協助其系統升級。",
+  
+
+
   "about-slogon": "BiiLabs致力於開發分佈式分類帳技術，以克服萬物互聯時代的挑戰，包括智能移動性和能源管理等。\n其核心技術可幫助各個行業進行數字化轉型，並為客戶解決關鍵問題，例如信任、安全性、增長和效率。\nBiiLabs的目標是成為萬物互連世界的領先技術提供商。",
   "about-milestone-2017": "公司註冊",
   "about-milestone-2018": "台灣公司開業",

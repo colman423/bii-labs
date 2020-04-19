@@ -77,10 +77,11 @@
 .news-title {
     color: $theme-color;
     font-weight: 600;
-    line-height: 2em;
+    // line-height: 2em;
+    padding-bottom: 15px;
     border-bottom: 2px solid $theme-color;
 }
-.news-content {
+.news-summary {
     line-height: 1.2rem;
 }
 .news-link {
