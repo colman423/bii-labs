@@ -19,7 +19,7 @@ header {
             color: rgb(41, 179, 235) !important; // to-check
         }
         &:hover {
-            color: #9dddf6 !important; // to-check
+            color: #9dddf6 !important;
         }
     }
     .lang-selector {
@@ -31,7 +31,7 @@ header {
         color: $theme-color;
         word-break: keep-all;
         &:hover {
-            background-color: rgb(41, 179, 235) !important; // to-check
+            background-color: rgb(41, 179, 235) !important;
         }
         &:focus {
             outline: none;
@@ -60,7 +60,7 @@ footer {
         color: $theme-color;
         &:hover {
             text-decoration: none;
-            color: blue; // to-ask
+            color: #29b3eb;
         }
     }
     .subscribe-input {
