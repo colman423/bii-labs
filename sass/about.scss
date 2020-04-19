@@ -82,7 +82,7 @@
             }
 
             &:hover {
-                // animation: toColor .8s;  // seems not so good
+                animation: toColor .8s;  // seems not so good
                 -webkit-filter: brightness(1) invert(0);
                 filter: brightness(1) invert(0);
             }
