@@ -49,10 +49,10 @@
         <path class="st1" d="M1379.85,284.5h-32.69c0,0,11.01,114.92-105.52,114.92"/>
     </g>
     <g transform="translate(0, 560)">
-        <image class="years-img" href="/assets/milestone-2017.png" x="520"/>
-        <image class="years-img" href="/assets/milestone-2018.png" x="825"/>
-        <image class="years-img" href="/assets/milestone-2019.png" x="1160"/>
-        <image class="years-img" href="/assets/milestone-2019-2.png" x="1410"/>
+        <image class="years-img" href="milestone-2017.png" x="520"/>
+        <image class="years-img" href="milestone-2018.png" x="825"/>
+        <image class="years-img" href="milestone-2019.png" x="1160"/>
+        <image class="years-img" href="milestone-2019-2.png" x="1410"/>
     </g>
     
     <g transform="translate(1286, 0)" class="bg">
