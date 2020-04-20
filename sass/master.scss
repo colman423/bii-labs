@@ -50,6 +50,11 @@ header {
             text-align: center;
             float: right;
             margin-bottom: 15px;
+
+            @include sm-down() {
+                margin-right: 15px;
+                margin-bottom: 0px;
+            }
         }
 
         .dropdown-menu {
@@ -68,6 +73,15 @@ header {
             overflow: hidden;
             opacity: 0;
             visibility: hidden;
+
+            @include sm-down() {
+                padding: 0px;
+                margin: 0px;
+                float: right;
+                li {
+                    display: table-cell;
+                }
+            }
         }
 
         &.show .dropdown-menu {
