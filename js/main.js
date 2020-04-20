@@ -19,6 +19,7 @@ $(function () {
 });
 
 function setLocale(locale) {
+  console.log("setLocale", locale)
   if (locale) {
     // console.log("locale", locale)
     $.i18n().load('i18n/' + locale + '.json', locale).done(
@@ -30,5 +31,8 @@ function setLocale(locale) {
     );
 
     localStorage.setItem('locale', locale);
+    $('.switch-locale').show();
+    var localeText = $('.switch-locale[data-locale="'+locale+'"]').hide().text();
+    $('.lang-selector').text(localeText);
   }
 };
