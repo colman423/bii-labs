@@ -1,5 +1,5 @@
 @import "./vars.scss";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
 
 body {
     // font-family: "Helvetica", "Arial", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
@@ -22,12 +22,12 @@ header {
             color: #9dddf6 !important;
         }
     }
-    .lang-selector {
+    @mixin lang-selector {
         background-color: white;
         border-radius: 50%;
         border: none;
-        height: 42px;
-        width: 42px;
+        height: 60px;
+        width: 60px;
         color: $theme-color;
         word-break: keep-all;
         &:hover {
@@ -35,6 +35,59 @@ header {
         }
         &:focus {
             outline: none;
+        }
+    }
+    .lang-selector-dropdown {
+        .lang-selector {
+            @include lang-selector;
+            &::after {
+                content: none;
+            }
+        }
+        .switch-locale {
+            @include lang-selector;
+            padding: 0px;
+            text-align: center;
+            float: right;
+            margin-bottom: 15px;
+
+            @include sm-down() {
+                margin-right: 15px;
+                margin-bottom: 0px;
+            }
+        }
+
+        .dropdown-menu {
+            background-color: transparent;
+            border: none;
+            text-align: center;
+
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+
+            max-height: 0;
+            display: block;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+
+            @include sm-down() {
+                padding: 0px;
+                margin: 0px;
+                float: right;
+                li {
+                    display: table-cell;
+                }
+            }
+        }
+
+        &.show .dropdown-menu {
+            max-height: 300px;
+            opacity: 1;
+            visibility: visible;
         }
     }
 }
@@ -86,6 +139,7 @@ footer {
 
 .text-theme {
     color: $theme-color;
+    font-size: 24px;
 }
 
 .section-title {
@@ -107,4 +161,3 @@ footer {
         max-width: 1080px !important;
     }
 }
-

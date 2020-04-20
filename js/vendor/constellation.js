@@ -125,8 +125,10 @@
 
       for (i = 0; i < initStars.length && i < length; i++) {
         var starPosition = initStars[i];
-        config.stars.push(new Star(starPosition.x * window.innerWidth, starPosition.y * window.innerWidth));
-        console.log(starPosition.x * window.innerWidth, starPosition.y * window.innerWidth)
+        var x = starPosition.x * window.innerWidth;
+        var y = starPosition.y * $canvas.height() + $canvas.height() / 2;
+        config.stars.push(new Star(x, y));
+        console.log(x, y)
       }
 
       for (; i < length; i++) {
