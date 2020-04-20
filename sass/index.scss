@@ -11,7 +11,7 @@
         position: relative;
         overflow: hidden;
         height: $container-height;
-        
+
         @mixin overlay($height) {
             // usage: @include overlay(XXXpx);
             // 讓圖層能重疊，重疊順序目前用html dom的順序來決定，若變更複雜再使用z-index
@@ -42,54 +42,63 @@
 #section-latest-news {
     background-color: $theme-color;
     padding-bottom: 180px;
-}
 
-.first-news {
-    background-color: white;
-    padding: 32px;
-
-    .news-container {
-        margin-top: 30px;
-    }
-
-    @include lg() {
-        width: 100%;
-        padding: 32px 80px 32px 0px;
+    .first-news {
+        background-color: white;
+        padding: 32px;
 
         .news-container {
-            margin-top: 0px;
-            margin-left: auto;
+            margin-top: 30px;
+        }
+
+        @include lg() {
+            width: 100%;
+            padding: 32px 80px 32px 0px;
+
+            .news-container {
+                margin-top: 0px;
+                margin-left: auto;
+            }
         }
     }
-}
 
-.news-card {
-    border-radius: 0px;
-    border: none;
-    .news-container {
-        margin: 32px;
+    .news-card {
+        border-radius: 0px;
+        border: none;
+        .news-container {
+            margin: 32px;
+        }
     }
-}
 
-.news-img {
-    width: 100%;
-}
-.news-title {
-    color: $theme-color;
-    font-weight: 600;
-    // line-height: 2em;
-    padding-bottom: 15px;
-    border-bottom: 2px solid $theme-color;
-}
-.news-summary {
-    line-height: 1.2rem;
-}
-.news-link {
-    display: block;
-    background-color: $theme-color;
-    color: white !important;
-    // text-decoration: none!important;
-    // width: 100%;
-    text-align: center;
-    padding: 4px 16px;
+    .news-img {
+        width: 100%;
+    }
+    .news-title {
+        color: $theme-color;
+        font-weight: 600;
+        // line-height: 2em;
+        padding-bottom: 15px;
+        border-bottom: 2px solid $theme-color;
+    }
+    .news-summary {
+        line-height: 1.2rem;
+    }
+    .news-link {
+        display: block;
+        background-color: $theme-color;
+        color: white !important;
+        // text-decoration: none!important;
+        // width: 100%;
+        text-align: center;
+        padding: 4px 16px;
+    }
+
+    .card-columns {
+        @include sm() {
+            column-count: 2;
+        }
+        @include md() {
+            column-count: 3;
+        }
+    }
 }
