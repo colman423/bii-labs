@@ -39,6 +39,10 @@
     background-color: $theme-color;
     padding-top: 160px;
     padding-bottom: 160px;
+
+    #milestone-svg {
+        margin-top: -150px;
+    }
 }
 
 #section-team {
