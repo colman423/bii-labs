@@ -151,12 +151,16 @@ $(function () {
   }
 
   function initMileStone() {
-    new Vivus('my-svg', {
+    new Vivus('milestone-svg', {
       type: 'oneByOne',
       duration: 150,
       // start: 'autostart'
 
-    }, console.log);
+    }, function() {
+      var $svg = $('#milestone-svg').contents().find('svg')
+      window.$svg = $svg;
+      $svg.find('text').animate({opacity: 1}, 'slow', 'swing');
+    });
   }
 
 })
