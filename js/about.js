@@ -151,16 +151,29 @@ $(function () {
   }
 
   function initMileStone() {
-    new Vivus('milestone-svg', {
-      type: 'oneByOne',
-      duration: 150,
-      // start: 'autostart'
+    var milestoneVivus = new Vivus('milestone-svg', {
+      type: 'oneByOne',   // 讓線條照順序出現
+      duration: 150,      // 總時間為150 animationFrame
+      start: 'manual'     // 手動控制何時開始此動畫
+    }, showMileStoneText);    // 動畫結束後的callback
 
-    }, function() {
+    $(window).scroll(tryPlayMileStone);
+    setTimeout(tryPlayMileStone, 100);
+
+    function tryPlayMileStone() {
+      var svgPosY = $('#milestone-svg').offset().top;
+      var svgMarginY = parseInt($('#milestone-svg').css('margin-top'));
+      var windowHeight = $(window).height();
+
+      if ($(this).scrollTop() > (svgPosY - svgMarginY - windowHeight)) {
+        milestoneVivus.play();
+      }
+    }
+    function showMileStoneText() {
       var $svg = $('#milestone-svg').contents().find('svg')
       window.$svg = $svg;
-      $svg.find('text').animate({opacity: 1}, 'slow', 'swing');
-    });
+      $svg.find('text').animate({ opacity: 1 }, 'slow', 'swing');
+    }
   }
 
 })
