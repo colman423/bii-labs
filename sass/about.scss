@@ -140,5 +140,18 @@
         font-weight: bold;
         color: $theme-dark-color;
     }
+    .map-input-column{
+        background-color: $theme-dark-color;
+        font-size: 16px;
+        color: white;
+    }
+    .map-submit-btn{
+        background-color: $theme-dark-color;
+        color: white;
+        width: 120px;
+        height: 30px;
+        float: right;
+        text-align: center;
+    }
 
 }
