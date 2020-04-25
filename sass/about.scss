@@ -130,9 +130,13 @@
     background-color: $theme-dark-color;
     padding-top: 160px;
     padding-bottom: 160px;
+    
     .form-wrapper {
         background-color: white;
         padding: 32px 28px;
+        @include sm-down() {
+            padding: 32px 12px;
+        }
     }
 
     .map-text{
@@ -144,17 +148,22 @@
         background-color: $theme-dark-color;
         font-size: 16px;
         color: white;
+        width: 100%;
+        padding: 4px 8px;
     }
     .map-submit-btn{
         background-color: $theme-dark-color;
         color: white;
         width: 120px;
-        height: 30px;
+        padding: .25rem .75rem;
         float: right;
         text-align: center;
+        border: none;
+
     }
     .map-icon{
-        width: 80%;
+        width: 64px;
+        height: 64px;
     }
 
 }
