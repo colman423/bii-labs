@@ -234,20 +234,20 @@
         <div class="col-12 col-lg-6">
           <h4 class="text-theme font-weight-bold">現在，馬上就可以輕易地跟我們取得聯繫：</h4>
           <br />
-          <form id="contact-form">
+          <form id="contact-form" action="https://formspree.io/xzbannyb" method="POST">
             <p style="margin-bottom: 0;" class="map-text">姓名</p>
-            <input type="text" name="UserName" class="map-input-column" style="border: 0px;">
+            <input type="text" name="client_name" id="client_name" class="map-input-column" style="border: 0px;">
             <br />
             <br />
             <p style="margin-bottom: 0;" class="map-text">電子信箱</p>
-            <input type="text" name="E-mail" class="map-input-column" style="border: 0px;">
+            <input type="text" name="client_email" id="client_email" class="map-input-column" style="border: 0px;">
             <br />
             <br />
             <p style="margin-bottom: 0;" class="map-text">內容</p>
-            <textarea name="content" rows="10" class="map-input-column"></textarea>
+            <textarea name="client_content" id="client_content" rows="10" class="map-input-column"></textarea>
             <br />
             <br />
-            <input type="submit" name="submit-btn" value="送出" class="map-submit-btn">
+            <input type="submit" value="送出" class="map-submit-btn">
           </form>
         </div>
         <div class="col-12 col-lg-6">
@@ -289,6 +289,10 @@
 
   <!-- vivus.js for svg animation -->
   <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+
+  <!-- email.js for SMS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+
   <script src="js/about.min.js"></script>
 
 </body>
