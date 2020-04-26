@@ -3,6 +3,9 @@ $(function () {
 
   initMileStone();
 
+  emailjs.init("user_gUSozZDHRWUJ1bhJsLsbR");
+  $('form#contact-form').submit(onSubmitContactForm);
+
   function createBannerCanvas() {
     var pointRadius = 3
     var color = '#3186e3'
@@ -174,6 +177,30 @@ $(function () {
       window.$svg = $svg;
       $svg.find('text').animate({ opacity: 1 }, 'slow', 'swing');
     }
+  }
+
+  function onSubmitContactForm(event) {
+    event.preventDefault()
+    var form = $('form#contact-form')[0]
+    $.ajax({
+      url: form.action,
+      method: form.method,
+      data: {
+        _subject: 'BiiLabs Official Website Contact Form from '+ $('#client_name').val(),
+        _replyto: $('#client_email').val(),
+        name: $('#client_name').val(),
+        email: $('#client_email').val(),
+
+        comments: $('#client_content').val(),
+      },
+      dataType: "json",
+      success: function (a, b, c) {
+        alert('寄送成功！')
+      },
+      fail: function (a, b, c) {
+        alert('發生了一些錯誤，請稍後再試！')
+      }
+    });
   }
 
 })
