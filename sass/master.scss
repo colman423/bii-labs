@@ -11,6 +11,12 @@ header {
 }
 
 header {
+    .navbar-brand img {
+        height: 30px;
+        @include sm() {
+            display: none;
+        }
+    }
     .nav-link {
         color: white !important;
         margin-left: 16px;
