@@ -143,6 +143,29 @@ footer {
     }
 }
 
+.back-to-top-btn {
+    @include md() {
+        display: none;
+    }
+    position: fixed;
+    z-index: 100;
+    right: 25px;
+    bottom: 0px;
+    opacity: 0;
+    transition: all 0.2s;
+
+    &.show {
+        bottom: 25px;
+        opacity: 1;
+        transition: all 0.2s;
+    }
+
+    i {
+        font-size: 2.25rem;
+        color: #666;
+    }
+}
+
 .text-theme {
     color: $theme-color;
 }
