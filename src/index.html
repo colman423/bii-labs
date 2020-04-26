@@ -13,7 +13,9 @@
 
   <!-- other files -->
   <link rel="stylesheet" href="css/index.css" />
-
+  <!-- <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/> -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 
 <body>
@@ -31,7 +33,34 @@
   <section id="section-latest-news">
     <div class="container thin-container">
       <h2 class="section-title" data-i18n="index-news">最新消息</h2>
+      <!--Carousel-->
       <br />
+      <br />
+      <div class = "autoplay first-news row no-gutters align-items-center">
+        <div>
+          <img class="news-img col-12 col-lg-7" src="https://miro.medium.com/max/1400/1*kHeIqnWlLjnC-f5IfABBUg.png" />
+          <div class="news-container col-12 col-lg-4">
+            <h4 class="news-title" data-i18n="index-news-title-1">BiiLabs與Eclipse基金會、IOTA基金會及業界領導廠商 聯手成立Tangle EE工作小組</h4>
+            <br />
+            <p class="news-summary" data-i18n="index-news-summary-1">BiiLabs 宣布與 Eclipse 基金會、IOTA 基金會、業界領導廠商以及學術界合作，推動成立 Tangle EE 工作小組，以針對基於 IOTA 的資料解決方案進行開發並使其商業化。</p>
+            <br />
+            <a href="" class="news-link" target="_blank">詳細內容</a>
+          </div>
+        </div>
+        <div>
+          <img class="news-img col-12 col-lg-7" src="https://miro.medium.com/max/1400/1*a-HTRnw6UugqtwxwoZiIlQ.jpeg" />
+          <div class="news-container col-12 col-lg-4">
+            <h4 class="news-title" data-i18n="index-news-title-2">BiiLabs 與業安科技協力打造全球首創智慧販賣機快速升級模組 透過區塊鏈實現安全、可信的身份驗證</h4>
+            <br />
+            <p class="news-summary" data-i18n="index-news-summary-2">BiiLabs 與業安科技宣布雙方合作，將BiiLabs 去中心化身份識別技術導入業安販賣機升級模組，統一安全身份驗證系統，應用於須受購買年齡規範的販賣機上，協助其系統升級。</p>
+            <br />
+            <a href="" class="news-link" target="_blank">詳細內容</a>
+          </div>
+        </div>
+      </div>      
+
+
+      <!-- <br />
       <br />
 
       <div class="first-news row no-gutters align-items-center">
@@ -57,7 +86,7 @@
           <br />
           <a href="" class="news-link" target="_blank">詳細內容</a>
         </div>
-      </div>
+      </div> -->
 
       <br />
       <br />
@@ -184,7 +213,10 @@
   <!-- endinject -->
   <script src="js/vendor/constellation.min.js"></script>
   <script src="js/index.min.js"></script>
-
+  <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/slick.min.js"></script>  -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 
 </html>
