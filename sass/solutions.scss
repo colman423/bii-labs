@@ -1,1 +1,48 @@
 @import "./vars.scss";
+
+#section-cover {
+    background-color: $theme-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    #temp-cover {
+        // temp test
+        display: block;
+        width: 55%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#section-main {
+    background-color: $theme-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .solution-card {
+        background-color: white;
+        color: $theme-color;
+        border-radius: 50px;
+        margin-left: -30px;
+        margin-right: -30px;
+        padding: 60px 120px;
+
+        &:not(:last-child) {
+            margin-bottom: 120px;
+        }
+    }
+
+    .solution-cover {
+        display: block;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .solution-title {
+        font-weight: 600;
+    }
+    .solution-text {
+        font-weight: 500;
+        white-space: pre-line;
+    }
+}
