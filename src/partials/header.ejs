@@ -1,6 +1,12 @@
 <header id="nav-wrapper">
   <nav class="navbar navbar-dark navbar-expand-sm navbar-right">
-    <a class="navbar-brand" href="index"><img src="assets/logo-white.png" alt="logo" /></a>
+    <a class="navbar-brand" href="index">
+      <picture>
+        <source srcset="assets/logo-white.webp" type="images/webp" />
+        <source srcset="assets/logo-white.png, assets/logo-white@2x.png 2x" />
+        <img src="assets/logo-white.png" alt="logo">
+      </picture>
+    </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header" aria-controls="header"
       aria-expanded="false" aria-label="Toggle navigation">
