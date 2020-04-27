@@ -67,5 +67,11 @@ $(function () {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    responsive:[
+      {
+        breakpoint: 750,
+        settings: "unslick",
+      }
+    ]
   });
 })
