@@ -69,7 +69,7 @@ $(function () {
     autoplaySpeed: 2000,
     responsive:[
       {
-        breakpoint: 750,
+        breakpoint: 992,
         settings: "unslick",
       }
     ]
