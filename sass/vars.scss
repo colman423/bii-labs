@@ -20,7 +20,7 @@ $xl-width: 1200px;
 }
 @mixin md-down() {
     // active while width < md-width
-    @media all and(min-width: $md-width) {
+    @media all and(max-width: $md-width) {
         @content;
     }
 }
@@ -32,7 +32,7 @@ $xl-width: 1200px;
 }
 @mixin lg-down() {
     // active while width < lg-width
-    @media all and(min-width: $lg-width) {
+    @media all and(max-width: $lg-width) {
         @content;
     }
 }
@@ -44,7 +44,7 @@ $xl-width: 1200px;
 }
 @mixin xl-down() {
     // active while width < xl-width
-    @media all and(min-width: $xl-width) {
+    @media all and(max-width: $xl-width) {
         @content;
     }
 }
