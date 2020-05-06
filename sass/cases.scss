@@ -2,11 +2,9 @@
 #section-cases{
     background-color: $theme-color;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 60px;    
 
     .text-background-color{
-        width: 600px;
-        height: 300px;
         background: -webkit-linear-gradient(left, #121531, transparent 90%);
         background: -o-linear-gradient(right, #121531, transparent 90%);
         background: -moz-linear-gradient(right,#121531, transparent 90%);
@@ -23,6 +21,7 @@
         color: white;
         font-size: 14px;
         padding-left: 60px;
+        padding-bottom: 50px;
         line-height: 30px;
     }
 }
