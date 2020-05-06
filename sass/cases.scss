@@ -2,7 +2,11 @@
 #section-cases{
     background-color: $theme-color;
     padding-top: 60px;
-    padding-bottom: 60px;    
+    padding-bottom: 60px;
+
+    .cases-img{
+        height: 100%;
+    }
 
     .text-background-color{
         background: -webkit-linear-gradient(left, #121531, transparent 100%);
