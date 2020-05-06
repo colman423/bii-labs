@@ -9,10 +9,12 @@
     }
 
     .text-background-color{
+        height: 320px;
         background: -webkit-linear-gradient(left, #121531, transparent 100%);
         background: -o-linear-gradient(right, #121531, transparent 90%);
         background: -moz-linear-gradient(right,#121531, transparent 90%);
         background: linear-gradient(right,#121531, transparent 90%);
+        overflow: auto;
     }
     .cases-title{
         color: white;
