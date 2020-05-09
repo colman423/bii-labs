@@ -12,12 +12,26 @@
     padding-bottom: 60px;
 
     .cases-img {
-        height: 100%;
+        // height: 100%;
         object-fit: contain;
+
+        /* The image used */
+        background-image: url("/assets/cases-kdan.webp");
+
+        /* Set a specific height */
+        // min-height: 1500px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        // background-position: center;
+        background-position-x: left;
+        background-position-y: 120px;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
     .cases-text-container {
-        height: 520px;
+        // height: 520px;
         padding-left: 60px;
 
         /* IE10 Consumer Preview */
@@ -41,27 +55,27 @@
         /* IE6-9 */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121531', endColorstr='transparent',GradientType=0 );
 
-        overflow: auto;
+        // overflow: auto;
 
-        /* width */
-        &::-webkit-scrollbar {
-            width: 10px;
-        }
+        // /* width */
+        // &::-webkit-scrollbar {
+        //     width: 10px;
+        // }
 
-        /* Track */
-        &::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
+        // /* Track */
+        // &::-webkit-scrollbar-track {
+        //     background: #f1f1f1;
+        // }
 
-        /* Handle */
-        &::-webkit-scrollbar-thumb {
-            background: #888;
-        }
+        // /* Handle */
+        // &::-webkit-scrollbar-thumb {
+        //     background: #888;
+        // }
 
-        /* Handle on hover */
-        &::-webkit-scrollbar-thumb:hover {
-            background: #aaa;
-        }
+        // /* Handle on hover */
+        // &::-webkit-scrollbar-thumb:hover {
+        //     background: #aaa;
+        // }
     }
     .cases-title {
         color: white;
