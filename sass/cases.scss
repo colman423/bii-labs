@@ -1,30 +1,68 @@
 @import "./vars.scss";
-#section-cases{
+#section-cases {
     background-color: $theme-color;
     padding-top: 60px;
     padding-bottom: 60px;
 
-    .cases-img{
+    .cases-img {
         height: 100%;
+        object-fit: contain;
     }
 
-    .text-background-color{
-        height: 320px;
+    .cases-text-container {
+        height: 520px;
         padding-left: 60px;
-        background: -webkit-linear-gradient(left, #121531, transparent 100%);
-        background: -o-linear-gradient(right, #121531, transparent 100%);
-        background: -moz-linear-gradient(right,#121531, transparent 100%);
-        background: linear-gradient(right,#121531, transparent 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#121531', endColorstr='transparent 100%', GradientType=1);
+
+        /* IE10 Consumer Preview */
+        background-image: -ms-linear-gradient(left, #121531, transparent 100%);
+        /* Mozilla Firefox */
+        background-image: -moz-linear-gradient(left, #121531, transparent 100%);
+        /* Opera */
+        background-image: -o-linear-gradient(left, #121531, transparent 100%);
+        /* Webkit (Safari/Chrome 10) */
+        background-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            color-stop(0, #121531),
+            color-stop(1, transparent)
+        );
+        /* Webkit (Chrome 11+) */
+        background-image: -webkit-linear-gradient(left, #121531, transparent 100%);
+        /* W3C Markup, IE10 Release Preview */
+        background-image: linear-gradient(to right, #121531, transparent 100%);
+        /* IE6-9 */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121531', endColorstr='transparent',GradientType=0 );
+
         overflow: auto;
+
+        /* width */
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #aaa;
+        }
     }
-    .cases-title{
+    .cases-title {
         color: white;
         font-weight: 600;
         font-size: 28px;
         padding-top: 50px;
     }
-    .cases-text{
+    .cases-text {
         color: white;
         font-size: 14px;
         padding-bottom: 30px;
