@@ -11,83 +11,69 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    .cases-img {
-        // height: 100%;
-        object-fit: contain;
+    .cases-item {
+        &:not(:last-child) {
+            margin-bottom: 150px;
+        }
 
-        /* The image used */
-        background-image: url("/assets/cases-kdan.webp");
 
-        /* Set a specific height */
-        // min-height: 1500px;
+        .cases-img {
+            // height: 100%;
+            object-fit: contain;
 
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        // background-position: center;
-        background-position-x: left;
-        background-position-y: 120px;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
+            /* The image used */
+            background-image: url("/assets/cases-kdan.webp");
+            background-repeat: no-repeat;
+            // background-size: contain;
 
-    .cases-text-container {
-        // height: 520px;
-        padding-left: 60px;
+            /* Set a specific height */
+            // min-height: 1500px;
 
-        /* IE10 Consumer Preview */
-        background-image: -ms-linear-gradient(left, #121531, transparent 100%);
-        /* Mozilla Firefox */
-        background-image: -moz-linear-gradient(left, #121531, transparent 100%);
-        /* Opera */
-        background-image: -o-linear-gradient(left, #121531, transparent 100%);
-        /* Webkit (Safari/Chrome 10) */
-        background-image: -webkit-gradient(
-            linear,
-            left top,
-            right top,
-            color-stop(0, #121531),
-            color-stop(1, transparent)
-        );
-        /* Webkit (Chrome 11+) */
-        background-image: -webkit-linear-gradient(left, #121531, transparent 100%);
-        /* W3C Markup, IE10 Release Preview */
-        background-image: linear-gradient(to right, #121531, transparent 100%);
-        /* IE6-9 */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121531', endColorstr='transparent',GradientType=0 );
+            /* Create the parallax scrolling effect */
+            // background-attachment: fixed;
+            // background-position: center;
+            // background-position-x: left;
+            // background-position-y: 120px;
+        }
 
-        // overflow: auto;
+        .cases-text-container {
+            // height: 520px;
+            padding-left: 60px;
 
-        // /* width */
-        // &::-webkit-scrollbar {
-        //     width: 10px;
-        // }
+            /* IE10 Consumer Preview */
+            background-image: -ms-linear-gradient(left, #121531, transparent 100%);
+            /* Mozilla Firefox */
+            background-image: -moz-linear-gradient(left, #121531, transparent 100%);
+            /* Opera */
+            background-image: -o-linear-gradient(left, #121531, transparent 100%);
+            /* Webkit (Safari/Chrome 10) */
+            background-image: -webkit-gradient(
+                linear,
+                left top,
+                right top,
+                color-stop(0, #121531),
+                color-stop(1, transparent)
+            );
+            /* Webkit (Chrome 11+) */
+            background-image: -webkit-linear-gradient(left, #121531, transparent 100%);
+            /* W3C Markup, IE10 Release Preview */
+            background-image: linear-gradient(to right, #121531, transparent 100%);
+            /* IE6-9 */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121531', endColorstr='transparent',GradientType=0 );
 
-        // /* Track */
-        // &::-webkit-scrollbar-track {
-        //     background: #f1f1f1;
-        // }
-
-        // /* Handle */
-        // &::-webkit-scrollbar-thumb {
-        //     background: #888;
-        // }
-
-        // /* Handle on hover */
-        // &::-webkit-scrollbar-thumb:hover {
-        //     background: #aaa;
-        // }
-    }
-    .cases-title {
-        color: white;
-        font-weight: 600;
-        font-size: 28px;
-        padding-top: 50px;
-    }
-    .cases-text {
-        color: white;
-        font-size: 14px;
-        padding-bottom: 30px;
-        padding-right: 60px;
-        line-height: 30px;
+        }
+        .cases-title {
+            color: white;
+            font-weight: 600;
+            font-size: 28px;
+            padding-top: 50px;
+        }
+        .cases-text {
+            color: white;
+            font-size: 14px;
+            padding-bottom: 30px;
+            padding-right: 60px;
+            line-height: 30px;
+        }
     }
 }
