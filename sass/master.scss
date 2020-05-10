@@ -124,6 +124,7 @@ footer {
         }
     }
     .social-links {
+        min-width: 48px;    // for IE
         font-size: 32px;
         padding-left: 8px;
         padding-right: 8px;
