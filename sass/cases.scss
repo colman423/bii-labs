@@ -16,24 +16,14 @@
             margin-bottom: 150px;
         }
 
-
         .cases-img {
-            // height: 100%;
-            object-fit: contain;
+            display: flex;
+            align-items: flex-start;
 
-            /* The image used */
-            background-image: url("/assets/cases-kdan.webp");
-            background-repeat: no-repeat;
-            // background-size: contain;
-
-            /* Set a specific height */
-            // min-height: 1500px;
-
-            /* Create the parallax scrolling effect */
-            // background-attachment: fixed;
-            // background-position: center;
-            // background-position-x: left;
-            // background-position-y: 120px;
+            img {
+                object-fit: contain;
+                width: 100%;
+            }
         }
 
         .cases-text-container {
@@ -60,7 +50,6 @@
             background-image: linear-gradient(to right, #121531, transparent 100%);
             /* IE6-9 */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121531', endColorstr='transparent',GradientType=0 );
-
         }
         .cases-title {
             color: white;
