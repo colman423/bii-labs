@@ -55,5 +55,5 @@ $.fn.parallex = function () {
             parallex.elements.push(parallexElement)
         });
         window.parallex.onScroll()
-    }, 0)
+    }, 300)
 };
