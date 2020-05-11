@@ -1,7 +1,8 @@
 function ParallexElement($ele) {
     this.$ele = $ele;
     this.elePosY = $ele.offset().top;
-    this.imgHeight = $ele.width() * 942 / 990;      // todo
+    this.elePosX = $ele.offset().left;
+    this.imgHeight = $ele.find('img').height();
     this.eleHeight = $ele.height();
     this.eleWidth = $ele.innerWidth();
 }
@@ -18,9 +19,9 @@ Parallex.prototype.onScroll = function () {
     }
 }
 Parallex.prototype.onScrollEle = function (parallexElement, windowScrollTop) {
-
     var $ele = parallexElement.$ele;
     var elePosY = parallexElement.elePosY;
+    var elePosX = parallexElement.elePosX;
     var imgHeight = parallexElement.imgHeight;
     var eleHeight = parallexElement.eleHeight;
     var eleWidth = parallexElement.eleWidth;
@@ -39,17 +40,20 @@ Parallex.prototype.onScrollEle = function (parallexElement, windowScrollTop) {
     else {
         console.log("change to fixed")
         $ele.css('top', '0px');
+        $ele.css('left', elePosX+'px');
         $ele.css('width', eleWidth + 'px');
         $ele.css('position', 'fixed');
     }
 }
 
-
 $.fn.parallex = function () {
-    if (!window.parallex) window.parallex = new Parallex()
-    this.each(function () {
-        var parallexElement = new ParallexElement($(this))
-        parallex.elements.push(parallexElement)
-    });
-    window.parallex.onScroll()
+    var _this = this;
+    setTimeout(function () {
+        if (!window.parallex) window.parallex = new Parallex()
+        _this.each(function () {
+            var parallexElement = new ParallexElement($(this))
+            parallex.elements.push(parallexElement)
+        });
+        window.parallex.onScroll()
+    }, 0)
 };
