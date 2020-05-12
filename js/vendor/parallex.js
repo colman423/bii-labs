@@ -40,20 +40,23 @@ Parallex.prototype.onScrollEle = function (parallexElement, windowScrollTop) {
     else {
         console.log("change to fixed")
         $ele.css('top', '0px');
-        $ele.css('left', elePosX+'px');
+        $ele.css('left', elePosX + 'px');
         $ele.css('width', eleWidth + 'px');
         $ele.css('position', 'fixed');
     }
 }
 
 $.fn.parallex = function () {
-    var _this = this;
-    setTimeout(function () {
-        if (!window.parallex) window.parallex = new Parallex()
-        _this.each(function () {
-            var parallexElement = new ParallexElement($(this))
-            parallex.elements.push(parallexElement)
+    if (!window.parallex) window.parallex = new Parallex()
+    this.each(function () {
+        var $ele = $(this);
+        var img = $ele.find('img')
+        console.log("each", $ele, img)
+        img.imagesLoaded( function () {
+            console.log("paral into", Date.now(), $ele)
+            var parallexElement = new ParallexElement($ele)
+            window.parallex.elements.push(parallexElement)
+            window.parallex.onScroll()
         });
-        window.parallex.onScroll()
-    }, 300)
+    })
 };
