@@ -20,23 +20,26 @@ yarn 1.22.4
 3. 打開localhost:3000
     
 
-4. html檔案寫在/src/\*.html
+4. html檔案請在 `/src/\*.html` 編輯；
    
-   style檔案寫在/sass/\*.sass
+   style檔案請在 `/sass/\*.scss` 編輯；
    
-   js檔案寫在/js/\*.js
+   js檔案請在 `/js/\*.js` 編輯；
    
-   onSave時自動處理至/dist/
+   onSave時會將這三者自動處理至/dist/，處理細節詳見[Folders](##Folders)
+
+   scss會compile成css；
+   
+   js會minify (production版的js會drop console)。
 
 5. images, icon, favicon.ico放在/static
 
-6. 此localhost server的根目錄會是[/dist, /static]
-   
-   e.g
+6. 此localhost server的根目錄會是[/dist, /static]， 
+   e.g:
    ```
-   /src/about.html => "http://localhost:3000/about"
-   /dist/js/a.min.js => <script src="/js/a.min.js"></script>
-   /dist/css/b.css => <link href="/css/b.css" />
+   /src/about.html => /dist/about.html => "http://localhost:3000/about"
+   /js/a.js => /dist/js/a.min.js => <script src="/js/a.min.js"></script>
+   /sass/b.scss => /dist/css/b.css => <link href="/css/b.css" />
    /static/assets/i.png => <img src="/assets/i.png" />
    ```
 
@@ -44,28 +47,28 @@ yarn 1.22.4
 ## Folders
 
 ### /gulpfile.js
-關於編譯sass, js的規則、開啟localhost的設定等。
+關於編譯sass, js, html的規則、開啟localhost的設定等。
 
 ### /src/
-放各個html檔案，在inject過header, footer後會被放在/dist/。
+放各個html檔案，在經過header, footer等inject後會被放在/dist/。
 
 ### /js/
-放各個js原始碼，最佳化後會被放在/dist/js/。
+放各個js原始碼，minify後會被放在/dist/js/。
 
 ### /sass/
-放各個sass原始碼，編譯後則會被放在/dist/css/。
-
-### /dist/
-放各個處理過的js, css, html檔案。*不需編輯、不需進git*
+放各個sass原始碼，編譯後會被放在/dist/css/。
 
 ### /static/
 放不需處理的靜態資源檔，像是images, icons, favicon.ico等等。
+
+### /dist/
+放各個處理過的js, css, html檔案。*不需編輯、不需進git*
 
 ### /design/
 放各頁設計圖檔。
 
 ### /deploy/
-```yarn build```完後產生此folder，可直接將folder內的所有東西上傳至ftp。*不需編輯、不需進git*
+```yarn build```完後產生此folder，可直接將folder內的所有東西上傳至ftp。此folder的產生方式與`/dist/`幾乎一樣，唯一差在js檔會被drop console。*不需編輯、不需進git*
 
 
 
