@@ -20,17 +20,13 @@ yarn 1.22.4
 3. 打開localhost:3000
     
 
-4. html檔案請在 `/src/\*.html` 編輯；
+4. html檔案請在 `/src/*.html` 編輯；
    
-   style檔案請在 `/sass/\*.scss` 編輯；
+   style檔案請在 `/sass/*.scss` 編輯；
    
-   js檔案請在 `/js/\*.js` 編輯；
+   js檔案請在 `/js/*.js` 編輯；
    
-   onSave時會將這三者自動處理至/dist/，處理細節詳見[Folders](##Folders)
-
-   scss會compile成css；
-   
-   js會minify (production版的js會drop console)。
+   onSave時會將這三者自動處理至/dist/，處理細節詳見[Folders](#Folders)。
 
 5. images, icon, favicon.ico放在/static
 
@@ -81,7 +77,7 @@ yarn 1.22.4
 一些常用圖案
 
 ### modernizr 2.8.3
-會根據裝置的不同，在<html class="~"\>增加不同的class
+會根據裝置的不同，在`<html class="~"\>`增加不同的class
 
 ### [jquery 3.4.1](https://api.jquery.com/)
 各種dom api
