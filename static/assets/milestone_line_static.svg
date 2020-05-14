@@ -9,7 +9,6 @@
 			font-family:&quot;Arial&quot;,&quot;Noto Sans TC&quot;,&quot;Microsoft JhengHei&quot;,sans-serif;
 			font-size: 1.8em;
 			fill: #fff;
-            opacity: 0;
 		}
     </style>
     <g transform="translate(0, 560)">

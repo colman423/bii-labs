@@ -160,6 +160,10 @@ $(function () {
       start: 'manual'     // 手動控制何時開始此動畫
     }, showMileStoneText);    // 動畫結束後的callback
 
+    
+    var $svg = $('#milestone-svg').contents().find('svg')
+    $svg.find('text').css({ opacity: 0 });
+
     $(window).scroll(tryPlayMileStone);
     setTimeout(tryPlayMileStone, 100);
 
@@ -174,7 +178,6 @@ $(function () {
     }
     function showMileStoneText() {
       var $svg = $('#milestone-svg').contents().find('svg')
-      window.$svg = $svg;
       $svg.find('text').animate({ opacity: 1 }, 'slow', 'swing');
     }
   }
