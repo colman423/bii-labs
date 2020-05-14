@@ -161,9 +161,15 @@ $(function () {
     }, showMileStoneText);    // 動畫結束後的callback
 
     $(window).scroll(tryPlayMileStone);
-    setTimeout(tryPlayMileStone, 100);
+
+    $('#milestone-svg')[0].addEventListener('load', function () {
+      console.log("loaded");
+      hideMilestoneText()
+      tryPlayMileStone()
+    }, true);
 
     function tryPlayMileStone() {
+      // console.log("tryPlayMileStone")
       var svgPosY = $('#milestone-svg').offset().top;
       var svgMarginY = parseInt($('#milestone-svg').css('margin-top'));
       var windowHeight = $(window).height();
@@ -172,10 +178,16 @@ $(function () {
         milestoneVivus.play();
       }
     }
-    function showMileStoneText() {
+    function hideMilestoneText() {
+      console.log("hideMilestoneText")
       var $svg = $('#milestone-svg').contents().find('svg')
-      window.$svg = $svg;
-      $svg.find('text').animate({ opacity: 1 }, 'slow', 'swing');
+      console.log("$svg.find('text.fade-in')", $svg.find('text.fade-in'))
+      $svg.find('text.fade-in').css({ opacity: 0 });
+    }
+    function showMileStoneText() {
+      // console.log("showMileStoneText")
+      var $svg = $('#milestone-svg').contents().find('svg')
+      $svg.find('text.fade-in').animate({ opacity: 1 }, 'slow', 'swing');
     }
   }
 
@@ -186,7 +198,7 @@ $(function () {
       url: form.action,
       method: form.method,
       data: {
-        _subject: 'BiiLabs Official Website Contact Form from '+ $('#client_name').val(),
+        _subject: 'BiiLabs Official Website Contact Form from ' + $('#client_name').val(),
         _replyto: $('#client_email').val(),
         name: $('#client_name').val(),
         email: $('#client_email').val(),
