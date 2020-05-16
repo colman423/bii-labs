@@ -38,7 +38,7 @@ header {
         width: 60px;
         color: $theme-color;
         word-break: keep-all;
-        &:hover {
+        &:not([disabled]):hover {
             background-color: rgb(41, 179, 235) !important;
         }
         &:focus {
