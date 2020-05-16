@@ -11,14 +11,14 @@ function Parallex() {
     this.elements = []
     $(window).scroll(this.onScroll.bind(this))
 }
-Parallex.prototype.onScroll = function () {
+Parallex.prototype.onScroll = function onScroll() {
     console.log("onScroll!", this)
     var windowScrollTop = $(window).scrollTop();
     for (var i = 0; i < this.elements.length; i++) {
         this.onScrollEle(this.elements[i], windowScrollTop)
     }
 }
-Parallex.prototype.onScrollEle = function (parallexElement, windowScrollTop) {
+Parallex.prototype.onScrollEle = function onScrollEle(parallexElement, windowScrollTop) {
     var $ele = parallexElement.$ele;
     var elePosY = parallexElement.elePosY;
     var elePosX = parallexElement.elePosX;
@@ -45,6 +45,9 @@ Parallex.prototype.onScrollEle = function (parallexElement, windowScrollTop) {
         $ele.css('position', 'fixed');
     }
 }
+Parallex.prototype.reset = function reset() {
+    this.elements = []
+}
 
 $.fn.parallex = function () {
     if (!window.parallex) window.parallex = new Parallex()
@@ -60,3 +63,5 @@ $.fn.parallex = function () {
         });
     })
 };
+
+if (!window.parallex) window.parallex = new Parallex()
