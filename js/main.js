@@ -37,6 +37,8 @@ $(function () {
 
 function setLocale(locale) {
   console.log("setLocale", locale)
+  $('.lang-selector').html('<span class="spinner-border" role="status" aria-hidden="true" style="width: 1.5rem; height: 1.5rem;"></span>  <span class="sr-only">Loading...</span>').prop("disabled", true);
+
   if (locale) {
     localStorage.setItem('locale', locale);
 
@@ -44,15 +46,12 @@ function setLocale(locale) {
       function () {
         $.i18n().locale = locale;
         $('body').i18n();
-        $('object').contents().find('svg').find('text[data-i18n]').each(function (idx, item) {
-          var $dom = $(item)
-          var text = $.i18n($dom.data('i18n'))
-          $dom.html(text)
-        })
 
         $('.switch-locale').show();
         var localeText = $('.switch-locale[data-locale="' + locale + '"]').hide().text();
-        $('.lang-selector').text(localeText);
+        $('.lang-selector').html(localeText).prop("disabled", false);
+
+        if (window.setLocaleCallback) window.setLocaleCallback()
       }
     );
   }

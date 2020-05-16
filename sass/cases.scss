@@ -95,9 +95,10 @@
         font-size: 24px;
         padding-top: 50px;
     }
-    .cases-text {
+    .cases-text, .cases-list {
         color: white;
         line-height: 30px;
+        white-space: pre-line;
     }
     .cases-list {
         &::before {
