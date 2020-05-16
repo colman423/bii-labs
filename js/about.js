@@ -3,7 +3,6 @@ $(function () {
 
   initMileStone();
 
-  emailjs.init("user_gUSozZDHRWUJ1bhJsLsbR");
   $('form#contact-form').submit(onSubmitContactForm);
 
   function createBannerCanvas() {
