@@ -62,7 +62,11 @@
 
   "about-slogon": "BiiLabs致力於開發分佈式分類帳技術，以克服萬物互聯時代的挑戰，包括智能移動性和能源管理等。\n其核心技術可幫助各個行業進行數字化轉型，並為客戶解決關鍵問題，例如信任、安全性、增長和效率。\nBiiLabs的目標是成為萬物互連世界的領先技術提供商。",
   "about-milestone-2017": "<tspan x='0' dy='.2em'>公司註冊</tspan>",
+  "about-milestone-2017-text": "公司註冊",
   "about-milestone-2018": "<tspan x='0' dy='.2em'>台灣公司開業</tspan>",
+  "about-milestone-2018-text": "台灣公司開業",
   "about-milestone-2019-1h": "<tspan x='0' dy='.2em'>新創融資(天使輪)：</tspan> <tspan x='0' dy='1.3em'>Arm IoT Capital和ParticleX</tspan> <tspan x='0' dy='3em'>宣布含有TransIoT的</tspan> <tspan x='0' dy='1.3em'>UBI用例</tspan>",
-  "about-milestone-2019-2h": "<tspan x='0' dy='.2em'>美國公司開業</tspan> <tspan x='0' dy='3em'>加入INATBA，Eclipse</tspan>   <tspan x='0' dy='1.3em'>Foundation和eCl @ ss</tspan>   <tspan x='0' dy='3em'>宣布與Yallvend合作</tspan>   <tspan x='0' dy='1.3em'>自動販賣機套件升級</tspan> "
+  "about-milestone-2019-1h-text": "新創融資(天使輪)：Arm IoT Capital和ParticleX \n\n宣布含有TransIoT的UBI用例",
+  "about-milestone-2019-2h": "<tspan x='0' dy='.2em'>美國公司開業</tspan> <tspan x='0' dy='3em'>加入INATBA，Eclipse</tspan>   <tspan x='0' dy='1.3em'>Foundation和eCl @ ss</tspan>   <tspan x='0' dy='3em'>宣布與Yallvend合作</tspan>   <tspan x='0' dy='1.3em'>自動販賣機套件升級</tspan> ",
+  "about-milestone-2019-2h-text": "美國公司開業 \n\n加入INATBA，Eclipse Foundation和eCl @ ss \n\n宣布與Yallvend合作自動販賣機套件升級"
 }

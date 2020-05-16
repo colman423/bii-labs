@@ -216,3 +216,11 @@ $(function () {
   }
 
 })
+
+function setLocaleCallback() {
+  $('#milestone-svg').contents().find('svg').find('text[data-i18n]').each(function (idx, item) {
+    var $dom = $(item)
+    var text = $.i18n($dom.data('i18n'))
+    $dom.html(text)
+  })
+}

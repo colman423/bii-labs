@@ -62,8 +62,12 @@
 
   "about-slogon": "BiiLabs is dedicated in developing distributed ledger technologies to overcome the challenges in the Internet of Everything era, including smart mobility and energy management, and more. \nIts core technologies assist the digital transformation of various industries, and to solve critical issues such as trust, security, growth and efficiency for our clients. \nBiiLabs aims to be a leading technology provider in the Internet of Everything world.",
   "about-milestone-2017": "<tspan x='0' dy='.2em'>Company Registered</tspan>",
+  "about-milestone-2017-text": "Company Registered",
   "about-milestone-2018": "<tspan x='0' dy='.2em'>Taiwan company opened</tspan>",
+  "about-milestone-2018-text": "Taiwan company opened",
   "about-milestone-2019-1h": "<tspan x='0' dy='.2em'>Angel Round fundraised</tspan> <tspan x='0' dy='1.3em'>from arm IoT Capital</tspan> <tspan x='0' dy='1.3em'>and ParticleX </tspan> <tspan x='0' dy='3em'>UBI use case with</tspan> <tspan x='0' dy='1.3em'>TransIoT announced</tspan>",
-  "about-milestone-2019-2h": "<tspan x='0' dy='.2em'>USA company opened</tspan> <tspan x='0' dy='3em'>Joined INATBA, Eclipse</tspan> <tspan x='0' dy='1.3em'>Foundation and eCl@ss</tspan> <tspan x='0' dy='3em'>Vending machine upgrade</tspan> <tspan x='0' dy='1.3em'> kit with Yallvend announced</tspan>"
+  "about-milestone-2019-1h-text": "Angel Round fundraised from arm IoT Capital and ParticleX \n\nUBI use case with TransIoT announced",
+  "about-milestone-2019-2h": "<tspan x='0' dy='.2em'>USA company opened</tspan> <tspan x='0' dy='3em'>Joined INATBA, Eclipse</tspan> <tspan x='0' dy='1.3em'>Foundation and eCl@ss</tspan> <tspan x='0' dy='3em'>Vending machine upgrade</tspan> <tspan x='0' dy='1.3em'> kit with Yallvend announced</tspan>",
+  "about-milestone-2019-2h-text": "USA company opened \n\nJoined INATBA, Eclipse Foundation and eCl@ss \n\nVending machine upgrade kit with Yallvend announced"
   
 }
